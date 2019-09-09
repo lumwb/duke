@@ -81,13 +81,20 @@ public class Ui {
 		this.outputHolder.append(String.format("Now you have %d tasks in the list.\n", taskList.getTaskListSize()));
 	}
 
+	/**
+	 * getOutput returns the required output to the user
+	 * @return string representation of the output required
+	 */
 	public String getOutput() {
 		String output =  this.outputHolder.toString();
 		resetUI();
 		return output;
 	}
 
-	public void resetUI() {
+	/**
+	 * sets the UI back to default state, awaiting for user input
+	 */
+	private void resetUI() {
 		this.outputHolder = new StringBuilder();
 	}
 }
